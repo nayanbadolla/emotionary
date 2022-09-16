@@ -8,6 +8,7 @@ var emojis={
     "👍🏽": "good luck",
     "❤️": "love",
     "🤞🏽": "finger's crossed",
+    "🫂":"hug",
     "😂": "hahaha",
     "😜": "naughty",
     "😑": "annoyance"
@@ -22,6 +23,9 @@ export default function App() {
     meaning=e.target.value
     if (meaning in emojis) {
       meaning=emojis[meaning]
+    }
+    else {
+      meaning="oops...not available 😥"
     }
     setMeaning(meaning)
   }
